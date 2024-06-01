@@ -47,7 +47,7 @@ This is an ASP.NET MVC web application designed for a simple agricultural manage
 ### Logging In
 
 - Navigate to the **Login** page using the navbar.
-- Log in using one of the default users or create a new farmer account.
+- Log in using one of the default users or users created by employee
 
 ### Product Management (Farmer)
 
