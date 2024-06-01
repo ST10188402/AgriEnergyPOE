@@ -1,11 +1,13 @@
 ﻿using AgriEnergyPOE.Models;
 using AgriEnergyPOE.Repositories;
 using AgriEnergyPOE.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace AgriEnergyPOE.Controllers
 {
+    [Authorize(Roles = "Farmer, Employee")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
