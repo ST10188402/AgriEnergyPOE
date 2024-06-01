@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ProductViewModel>
+@{
+    ViewData["Title"] = "All Products";
+}
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="p-4">All Products</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="d-flex" asp-action="Index" asp-controller="Product">
+                <input name="searchString" class="form-control me-1" type="search" placeholder="Search" aria-label="Search" value="@ViewData["CurrentFilter"]">
+                <select name="category" class="form-control me-1">
+                    <option value="">All Categories</option>
+                    <option value="Water">Water</option>
+                    <option value="Solar">Solar</option>
+                    <input id="startDate" name="startDate" class="form-control me-1" type="date">
+                    <input id="endDate" name="endDate" class="form-control me-1" type="date">
+                </select>
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-md-12 p-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Date Added</th>
+                        <th scope="col">Farmer</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Title</td>
+                            <td>@product.Description</td>
+                            <td>@product.Price</td>
+                            <td>@product.Category</td>
+                            <td>@product.DateAdded</td>
+                            <td>@product.Farmer.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

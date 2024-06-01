@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container p-4">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Title</h5>
+                        <p class="card-text">@product.Description</p>
+                        <p class="card-text">Price: @product.Price</p>
+                        <p class="card-text">Category: @product.Category</p>
+                        <p class="card-text">Date Added: @product.DateAdded.ToShortDateString()</p>
+                        <p class="card-text">Farmer: @product.Farmer.Name</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

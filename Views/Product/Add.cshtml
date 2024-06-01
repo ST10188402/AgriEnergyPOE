@@ -1,0 +1,53 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "All Products";
+}
+<div class="p-4 container">
+    <div class="row p-4">
+        <div class="col-md-12">
+            <h3>Add new product</h3>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-md-6">
+            <form asp-controller="Product" asp-action="Add" method="post">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label fw-bold">Title</label>
+                    <input asp-for="Title" type="text" class="form-control">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-bold">Description</label>
+                    <input asp-for="Description" type="text" class="form-control">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Price" class="form-label fw-bold">Price</label>
+                    <input asp-for="Price" type="text" class="form-control">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Category</label>
+                    <div class="d-flex">
+                        <div class="form-check px-4">
+                            <input asp-for="Category" id="Water" class="form-check-input" value="Water" type="radio">
+                            <label class="form-check-label fw-bold" for="Water">
+                                Water
+                            </label>
+                        </div>
+                        <div class="form-check px-4">
+                            <input asp-for="Category" id="Solar" class="form-check-input" value="Solar" type="radio">
+                            <label class="form-check-label fw-bold" for="Solar">
+                                Solar
+                            </label>
+                        </div>
+                        <span asp-validation-for="Category" class="text-danger"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
