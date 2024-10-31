@@ -1,80 +1,44 @@
-# Agricultural Management System
 
-## Overview
 
-This is an ASP.NET MVC web application designed for a simple agricultural management system with two user roles: **Farmer** and **Employee**. The application includes functionalities for managing products and farmers, with role-based access controls.
+### **FathersHeartAdmin Overview**
 
-### Features
+**Purpose**: The **FathersHeartAdmin** application serves as an administrative tool for the Fathers Heart NGO, enabling admins to efficiently manage data related to beneficiaries, courses, currency, educational resources, events, job postings, volunteers, and video resources. This application is integral to updating and maintaining the **OVICITE** mobile app, ensuring that the information provided to users is accurate and current.
 
-- **Navigation Bar**:
-  - Home
-  - Products
-    - Add Product
-    - List Products
-  - Farmers (Employee only)
-    - Add Farmer
-    - List Farmers
-  - Login
-  - Logout
+### **Key Features and Pages**
 
-- **Product Management** (Farmer):
-  - Add new products.
-  - View and search through all products in the database.
-  - Search by Farmer Name, Category, or Date Range.
+1. **AddBeneficiaryFromExistingUserPage**: Allows admins to search for and add existing users as beneficiaries.
+   
+2. **BeneficiariesPage**: Displays a list of all beneficiaries with options to edit or remove them.
 
-- **Farmer Management** (Employee):
-  - Create new farmer accounts.
-  - View and manage a list of all farmers.
-  - Delete farmer accounts.
+3. **EditBeneficiaryPage**: Provides functionality to update the contact details and information of existing beneficiaries.
 
-## Technologies Used
+4. **AddCoursePage**: Enables the creation of new courses, including details such as title, description, and schedule.
 
-- ASP.NET Core MVC
-- Entity Framework Core
-- Identity for authentication and authorization
-- SQL Server for database
+5. **CoursesPage**: Displays available courses for management, with options to edit, delete, or view details.
 
-## Getting Started
+6. **AddCurrencyPage**: Allows the addition of new currency options to support financial transactions.
 
-### Prerequisites
+7. **CurrencyPage**: Manages existing currency information and exchange rates, including options to edit or delete.
 
-- .NET Core SDK
-- SQL Server
-- Visual Studio or any preferred IDE
+8. **AddEduLinkPage**: Facilitates the addition of new educational resource links.
 
-## Usage
+9. **EducationPage**: Displays and manages educational resources, allowing edits and deletions.
 
-### Logging In
+10. **AddEventPage**: Enables the creation of new events, including details such as date, time, and description.
 
-- Navigate to the **Login** page using the navbar.
-- Log in using one of the default users or users created by employee
+11. **EventsPage**: Manages and displays scheduled events with editing and deletion capabilities.
 
-### Product Management (Farmer)
+12. **AddJobPage**: Allows posting of new job opportunities, including job title and description.
 
-- **Add Product**:
-  - Click on **Products** > **Add Product**.
-  - Fill in the product details and submit.
-- **List Products**:
-  - Click on **Products** > **List Products**.
-  - Use the search fields at the top to filter products by Farmer Name, Category, or Date Range.
+13. **JobsPage**: Displays and manages job postings with options to edit or delete.
 
-### Farmer Management (Employee)
+14. **VolunteersPage**: Manages volunteer information and opportunities, allowing edits and removals of outdated listings.
 
-- **Add Farmer**:
-  - Click on **Farmers** > **Add Farmer**.
-  - Fill in the farmer details and submit.
-- **List Farmers**:
-  - Click on **Farmers** > **List Farmers**.
-  - View all farmers and delete any farmer using the delete option next to each farmer.
+15. **AddVideoPage**: Facilitates the upload of new YouTube video resources, including title and description.
 
-## Role-Based Access Control
+16. **YouTubePage**: Displays and manages a list of available YouTube video resources, with editing and deletion options.
 
-- **Farmer**:
-  - Can add and list products.
-- **Employee**:
-  - Can add and list farmers.
-  - Can delete farmer accounts.
+### **Functionality**
 
-## License
+The **FathersHeartAdmin** application provides a comprehensive CRUD (Create, Read, Update, Delete) functionality across all its pages, empowering admins to efficiently manage various aspects of the NGO's operations. This ensures that the mobile app **OVICITE** remains updated with relevant information, enhancing the support provided to beneficiaries and users.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
